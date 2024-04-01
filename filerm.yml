@@ -1,0 +1,12 @@
+--- # playbook to remnote file from remote server
+- hosts: demo
+  connection: ssh
+  become: yes
+  user: nbt
+    
+  tasks:
+    - name: testing
+      file:
+        path: /tmp/vitnor.txt
+        state: absent
+
